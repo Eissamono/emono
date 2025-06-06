@@ -331,7 +331,7 @@ border-radius: 15px;
 
 @media screen and (max-width:500px) {
     h1,h2{
-        font-size: 3rem;
+        font-size: 10rem;
     }
 
     header{
