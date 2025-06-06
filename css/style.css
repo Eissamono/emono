@@ -1,0 +1,368 @@
+:root:not(.light){
+    --bg-color1 : #292929;
+    --bg-color2:#1c1c1c;
+    --color1:#fff;
+    -color2:#888888;
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-color1);
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+li{
+    list-style: none;
+}
+h1,h2{
+font-family: 'poppins',sans-serif;
+color: var(--color1);
+font-size: 4rem;
+font-weight: 700;
+}
+
+h3{
+    color: var(--color1);
+    font-family: 'poppins'sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.portfolio{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+.portfolio-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    position: absolute;
+    padding: 0 15px;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    transition: .8s;
+    background-color: var(--bg-color1);
+}
+
+header .portfolio-row.header-wrap{
+    justify-content: space-between;
+    align-items: center;
+}
+.my-name a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color1);
+    font-family: 'poppins'sans-serif;
+    
+
+}
+.my-name a:hover{
+    transform: all;
+    opacity: 1;
+}
+
+.hamburger{
+    font-size:20px;
+    background-color: rgb(236, 241, 250);
+    color: #01143e;
+    display: none;
+    height: 30px;
+    width: 35px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid goldenrod;
+}
+
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.navbar ul li{
+    display: inline;
+    margin-left: 35px;
+}
+.navbar ul li a {
+    font-size: 1rem;
+    line-height: 72px;
+    color: var(--color1);
+    font-weight: 600;
+    position: relative;
+    font-family: 'poppins'sans-serif;
+    text-transform: uppercase;
+    transform: .8s;
+}
+.slider{
+    position: relative;
+    padding: 150px 0 50px 0;
+    background-color: var(--bg-color1);
+
+}
+.slider-content{
+    align-items: center !important;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.slider-general{
+    flex: 0 0 auto;
+    width: 60%;
+    
+}
+
+.slider-general .welcome-msg{
+    font-family: 'poppins'sans-serif;
+    color: var(--color1);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-right: 20%;
+    padding-left: 15px;
+    
+   
+}
+.welcome-msg {
+    animation-name: slider-general;
+    animation-duration: 1s;
+   
+}
+@keyframes slider-general{
+        from{
+            transform: translateX(-10px);
+        }
+        to{
+            transform: translateX(0);
+        }
+}
+
+
+
+
+
+
+.welcome-text h1{
+    display: inline;
+    padding-left: 15px;
+}
+.slider-general p{
+    line-height: 30px;
+    padding-right: 26%;
+    font-family: 'poppins'sans-serif;
+    color: var(--color1);
+    padding-left: 15px;
+}
+
+.text-wrap{
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+.main-title{
+    -webkit-text-stroke: 1px goldenrod;
+    -webkit-text-fill-color: transparent;
+}
+.main-title, 
+.hover-title{
+    transition: .5s cubic-bezier(0.51,0.57,0.17,1);
+}
+.hover-title{
+    color: var(--color1);
+    position: absolute;
+    transform: translate3d(0, 100%, 0);
+}
+.text-wrap:hover .main-title{
+    transform: translate3d(0, -100%, 0);
+    transition-delay: 0.1s;
+}
+.text-wrap:hover .hover-title{
+    transform: translate3d(0,0,0);
+}
+.download-resume{
+    padding-left: 25px;
+    
+}
+.download-resume a {
+display: inline-block;
+margin-top: 15px;
+padding: 15px 30px;
+transition: ease all 0.35s;
+color: var(--color1);
+font-family: "poppins"sans-serif;
+background-color:#1150c527 ;
+position: relative;
+z-index: 1001;
+text-transform: uppercase;
+line-height: 30px;
+border-radius: 10px;
+border: 1px solid goldenrod;
+
+
+}
+
+.download-resume a::before {
+    background-color: rgba(9, 189, 189, 0.192);
+    border-radius: 10px;
+    color: #01143e;
+}
+.download-resume a::before {
+    top: 0;
+    width: 0;
+    left: auto;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+     
+    
+}
+
+.download-resume a:hover::before{
+    left: 0;
+    width: 100%;
+    right: auto ;
+    color: var(--color1);
+    font-weight: 800;
+
+}
+.slider-image{
+    float: 0 0 auto;
+    width:40%;
+    
+}
+.welcome-image img{
+    max-width: 600px;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 15px;
+    border: 1px solid goldenrod;
+
+}
+.slider-image .welcome-image{
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.4s;
+}
+
+.slider-image .welcome-image::before{
+content: "";
+width: calc(50% + 10px);
+height: calc(50% + 10px);
+right: 20%;
+bottom: -10px;
+position: absolute;
+z-index: -1;
+transition: all 0.7s;
+background: linear-gradient(to right, #11abe7,#c506eb,#eb6206);
+border-radius: 15px;
+}
+.welcome-image:hover::before{
+    width: 70%;
+    height: 90%;
+    opacity: 1;
+
+}
+
+.welcome-image:hover{
+    transform: translateY(-10.5px);
+}
+
+#content{
+    width: 100%;
+    background-color: var(--bg-color2);
+    padding: 100px 0;
+    text-align: center;
+}
+.contact-info{
+    margin: 30px 0;
+}
+.contact-info span{
+    color: #11abe7;
+}
+
+.contact-info span.contact-info
+.contact-info a{
+    color: var(--bg-color2);
+    font-weight:600 ;
+    font-family: 'poppins'sans-serif;
+
+}
+
+.contact-info h3{
+    color: #fff;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.social-link ul{
+    display: inline-block;
+    margin: 5px 10px;
+}
+.social-link ul a {
+    color: #fff;
+    font-family: 'poppins'sans-serif;
+    transition: all 0.3 ease-out;
+}
+.contact-info h3:hover,
+.social-link ul a:hover {
+    color: var(--bg-color1);
+}
+
+@media screen and (max-width:500px) {
+    h1,h2{
+        font-size: 3rem;
+    }
+
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color:rgba(236, 241, 250, 0.055) ;
+        border-bottom: 1px solid goldenrod;
+        border-radius: 10px;
+        padding-top: 5px;
+    }
+    
+    .my-name .logo{
+        color: #01143e;
+    }
+    .hamburger i{
+        display: inline-block;
+    }
+
+    .navbar{
+        position: absolute;
+        background-color: rgb(236, 241, 250);
+        width: 100%;
+        left: 0px;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        display: none;
+    }
+
+    .navbar.show{
+        display: block;
+    }
+}
